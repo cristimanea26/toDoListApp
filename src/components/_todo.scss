@@ -3,7 +3,7 @@
   justify-content: start;
   align-items: center;
   flex-flow: column wrap;
-  width: 25rem;
+  width: 27.5rem;
   min-height: 30rem;
   background-color: $colorAA;
   border-radius: 1rem;
@@ -149,13 +149,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .toDoList {
-    .toDoListTitle {
-      h1 {
-        font-size: 2rem;
-      }
-    }
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -166,6 +159,7 @@
 
     .toDoListTitle {
       h1 {
+        font-size: 2rem;
         margin: 0 0 1.5rem 0;
         letter-spacing: 0.15rem;
       }
