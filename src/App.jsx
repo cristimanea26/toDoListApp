@@ -1,10 +1,10 @@
-import React from 'react';
-import ToDoList from './components/ToDoList.jsx';
+import React from "react";
+import ToDoList from "./components/ToDoList";
 
 const App = () => {
   return (
-    <div className='App'>
-      <div className='content'>
+    <div className="App">
+      <div className="content">
         <ToDoList />
       </div>
     </div>

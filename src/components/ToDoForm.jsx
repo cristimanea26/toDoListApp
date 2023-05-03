@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 
 const ToDoForm = (props) => {
-  const [input, setInput] = useState(props.edit ? props.edit.value : '');
+  const [input, setInput] = useState(props.edit ? props.edit.value : "");
 
   const inputRef = useRef(null);
 
@@ -21,37 +21,37 @@ const ToDoForm = (props) => {
       text: input,
     });
 
-    setInput('');
+    setInput("");
   };
 
   return (
-    <div className='toDoForm'>
-      <form className='toDoFormContainer' onSubmit={handleSubmit}>
+    <div className="toDoForm">
+      <form className="toDoFormContainer" onSubmit={handleSubmit}>
         {props.edit ? (
           <>
             <input
-              className='toDoInput edit'
-              type='text'
-              placeholder='Update your item'
+              className="toDoInput edit"
+              type="text"
+              placeholder="Update your item"
               value={input}
-              name='text'
+              name="text"
               onChange={handleChange}
               ref={inputRef}
             />
-            <button className='toDoButton edit'>Update</button>
+            <button className="toDoButton edit">Update</button>
           </>
         ) : (
           <>
             <input
-              className='toDoInput'
-              type='text'
-              placeholder='Add a todo'
+              className="toDoInput"
+              type="text"
+              placeholder="Add a todo"
               value={input}
-              name='text'
+              name="text"
               onChange={handleChange}
               ref={inputRef}
             />
-            <button className='toDoButton'>Add todo</button>
+            <button className="toDoButton">Add todo</button>
           </>
         )}
       </form>

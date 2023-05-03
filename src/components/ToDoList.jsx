@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion as m } from 'framer-motion';
-import { fadeIn } from './Animations.jsx';
-import ToDo from './ToDo.jsx';
-import ToDoForm from './ToDoForm.jsx';
+import React, { useState } from "react";
+import { motion as m } from "framer-motion";
+import { fadeIn } from "./Animations";
+import ToDo from "./ToDo";
+import ToDoForm from "./ToDoForm";
 
 const ToDoList = () => {
   const [todos, setTodos] = useState([]);
@@ -41,15 +41,15 @@ const ToDoList = () => {
 
   return (
     <m.div
-      className='toDoList'
-      variants={fadeIn('down', 'tween', 0.75, 1)}
-      initial='hidden'
-      animate='show'
+      className="toDoList"
+      variants={fadeIn("down", "tween", 0.75, 1)}
+      initial="hidden"
+      animate="show"
     >
-      <div className='toDoListTitle'>
+      <div className="toDoListTitle">
         <h1>What's the Plan for Today?</h1>
       </div>
-      <div className='toDoListContainer'>
+      <div className="toDoListContainer">
         <ToDoForm onSubmit={addTodo} />
         <ToDo
           todos={todos}

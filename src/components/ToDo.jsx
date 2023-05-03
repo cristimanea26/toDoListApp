@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import ToDoForm from './ToDoForm.jsx';
-import * as FaIcons from 'react-icons/fa';
+import React, { useState } from "react";
+import ToDoForm from "./ToDoForm";
+import * as FaIcons from "react-icons/fa";
 
 const ToDo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
   const [edit, setEdit] = useState({
     id: null,
-    value: '',
+    value: "",
   });
 
   const submitUpdate = (value) => {
     updateTodo(edit.id, value);
     setEdit({
       id: null,
-      value: '',
+      value: "",
     });
   };
 
@@ -23,22 +23,22 @@ const ToDo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
   return todos.map((todo, index) => (
     <div
       key={index}
-      className={todo.isComplete ? 'toDoRow complete' : 'toDoRow'}
+      className={todo.isComplete ? "toDoRow complete" : "toDoRow"}
     >
       <div
         key={todo.id}
-        className='toDoTitle'
+        className="toDoTitle"
         onClick={() => completeTodo(todo.id)}
       >
         <h2>{todo.text}</h2>
       </div>
-      <div className='toDo'>
+      <div className="toDo">
         <FaIcons.FaRegWindowClose
-          className='toDoDelete'
+          className="toDoDelete"
           onClick={() => removeTodo(todo.id)}
         />
         <FaIcons.FaEdit
-          className='toDoEdit'
+          className="toDoEdit"
           onClick={() => setEdit({ id: todo.id, value: todo.text })}
         />
       </div>
